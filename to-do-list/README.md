@@ -37,3 +37,11 @@ App (root component)
 ------------TodoEditButton
 ----TodoFooter
 --------TodoClearButton
+
+├─ TodoList
+│ └─ TodoItem
+│ ├─ TodoDeleteButton
+│ └─ TodoEditButton
+└─ TodoFooter
+├─ TodoClearButton
+└─ TodoStatistics
