@@ -1,5 +1,7 @@
 <template>
-  <h1>Header page</h1>
+  <header>
+    <h1>Header page</h1>
+  </header>
 </template>
 
 <script lang="ts">
@@ -9,11 +11,7 @@ export default class Header extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: HyliaSerif;
-  src: url("HyliaSerifBeta-Regular.otf") format("opentype");
-}
 h1 {
-  font-family: HyliaSerif;
+  border: 1px solid blue;
 }
 </style>
