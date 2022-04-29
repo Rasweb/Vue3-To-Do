@@ -8,4 +8,12 @@ import { Vue } from "vue-class-component";
 export default class Header extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+@font-face {
+  font-family: HyliaSerif;
+  src: url("HyliaSerifBeta-Regular.otf") format("opentype");
+}
+h1 {
+  font-family: HyliaSerif;
+}
+</style>
