@@ -14,4 +14,9 @@ import Header from "./components/Header.vue";
 export default class App extends Vue {}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  padding: 0;
+  margin: 0;
+}
+</style>
