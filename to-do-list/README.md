@@ -32,19 +32,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ```
 App (root component)
-----TodoList
---------TodoItem
-------------TodoDeleteButton
-------------TodoEditButton
-----TodoFooter
---------TodoClearButton
---------TodoStatistic
+    TodoList
+        TodoItem
+            TodoDeleteButton
+            TodoEditButton
+    TodoFooter
+        TodoClearButton
+        TodoStatistic
 ```
-
-├─ TodoList
-│ └─ TodoItem
-│ ├─ TodoDeleteButton
-│ └─ TodoEditButton
-└─ TodoFooter
-├─ TodoClearButton
-└─ TodoStatistics
