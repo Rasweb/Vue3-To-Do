@@ -40,3 +40,21 @@ App (root component)
         TodoClearButton
         TodoStatistic
 ```
+
+### List of Objects example in vue.
+
+```
+<script>
+lists: [
+    {id:1, title: dave },
+    {id:2, title: brad},
+    {id:3, title: bob}
+]
+</script>
+
+<template>
+<Todo v-for="list in lists"
+:key="list.id"
+:title="post.title />
+</template>
+```
