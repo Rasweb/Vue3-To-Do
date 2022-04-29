@@ -30,6 +30,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Todo component tree
 
+---
+
 App (root component)
 ----TodoList
 --------TodoItem
@@ -37,6 +39,9 @@ App (root component)
 ------------TodoEditButton
 ----TodoFooter
 --------TodoClearButton
+--------TodoStatistic
+
+---
 
 ├─ TodoList
 │ └─ TodoItem
