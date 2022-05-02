@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Header page</h1>
+    <h1>Vue ToDo List</h1>
   </header>
 </template>
 
@@ -11,7 +11,6 @@ export default class Header extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  border: 1px solid blue;
+header {
 }
 </style>

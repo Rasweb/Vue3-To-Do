@@ -18,6 +18,16 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  text-align: center;
+}
+
 #app {
   padding: 0;
   margin: 0;
