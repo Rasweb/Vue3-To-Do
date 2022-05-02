@@ -60,3 +60,19 @@ lists: [
 :title="post.title />
 </template>
 ```
+
+<!--
+ADDS A NEW TODO ITEM
+cont newItem = new Todo("Dave", "Dave", "Dave", 8),
+Todo.push(newItem);
+
+SORTS THE TODO
+Todo.sort(function (a,b) {
+    return a.title - b.title
+})
+
+REMOVES A TODO ITEM
+removeToDo = (i) => {
+    Todo.splice(i, 1);
+};
+ -->

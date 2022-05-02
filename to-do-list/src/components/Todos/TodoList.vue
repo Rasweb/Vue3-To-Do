@@ -15,6 +15,7 @@
               praesentium. Autem, veniam tempora!
             </p>
           </div>
+          <!-- <button @click="removeToDo"></button> -->
         </li>
       </ul>
     </div>
@@ -24,8 +25,12 @@
 <script lang="ts">
 import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
+import DeleteBtn from "./Buttons/TodoDeleteButton.vue";
 
 @Options({
+  components: {
+    DeleteBtn,
+  },
   props: {
     todo: Todo,
   },
