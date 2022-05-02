@@ -18,6 +18,8 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
 html,
 body {
   margin: 0px;
@@ -25,7 +27,14 @@ body {
   background-color: #ece6d9;
 }
 
+/* Specifies a custom font*/
+@font-face {
+  font-family: HyliaSerif;
+  src: url("./assets/HyliaSerifBeta-Regular.otf") format("opentype");
+}
+
 h1 {
+  font-family: HyliaSerif;
   text-align: center;
 }
 
