@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Vue ToDo List</h1>
+    <h1>Vue Zelda ToDo List</h1>
   </header>
 </template>
 

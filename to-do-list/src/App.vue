@@ -24,6 +24,10 @@ body {
   padding: 0px;
 }
 
+li {
+  list-style: none;
+}
+
 h1 {
   text-align: center;
 }

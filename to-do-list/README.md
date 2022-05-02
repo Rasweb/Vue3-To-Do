@@ -1,5 +1,7 @@
 # to-do-list
 
+This is information from Nintendos Legend of Zelda Breath of the Wild. I don't own any of these information.
+
 ## Project setup
 
 ```
