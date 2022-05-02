@@ -1,17 +1,20 @@
 <template>
   <Header />
-  <TodoList />
+  <delete-btn />
+  <todo-list />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Header from "./components/Header.vue";
+import DeleteBtn from "./components/Todos/Buttons/TodoDeleteButton.vue";
 import TodoList from "./components/Todos/TodoList.vue";
 
 @Options({
   components: {
     Header,
     TodoList,
+    DeleteBtn,
   },
 })
 export default class App extends Vue {}
