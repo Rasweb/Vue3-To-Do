@@ -1,14 +1,17 @@
 <template>
   <Header />
+  <TodoList />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Header from "./components/Header.vue";
+import TodoList from "./components/Todos/TodoList.vue";
 
 @Options({
   components: {
     Header,
+    TodoList,
   },
 })
 export default class App extends Vue {}
