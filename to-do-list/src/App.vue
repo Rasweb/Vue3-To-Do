@@ -22,10 +22,7 @@ html,
 body {
   margin: 0px;
   padding: 0px;
-}
-
-li {
-  list-style: none;
+  background-color: #ece6d9;
 }
 
 h1 {
