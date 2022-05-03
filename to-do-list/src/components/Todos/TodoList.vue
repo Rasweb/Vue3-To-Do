@@ -1,7 +1,8 @@
 <template>
-  <header>
+  <div>
     <h1>Quest list</h1>
     <div class="todoList">
+      <AddTodo @addTodo="handleAddTodo($event)" />
       <!-- <p>Ordered by order</p> -->
       <ul>
         <li v-for="todo in todos" :key="todo.id">
@@ -21,17 +22,19 @@
         </li>
       </ul>
     </div>
-  </header>
+  </div>
 </template>
 
 <script lang="ts">
 import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
 import DeleteTodo from "./Buttons/DeleteTodo.vue";
+import AddTodo from "./Buttons/AddTodo.vue";
 
 @Options({
   components: {
     DeleteTodo,
+    AddTodo,
   },
 })
 export default class TodoList extends Vue {
@@ -48,6 +51,10 @@ export default class TodoList extends Vue {
   handleRemoveTodo(t: Todo) {
     console.log("Du är nu i TodoList", t);
     this.todos.splice(0, 1);
+  }
+  handleAddTodo(t: Todo) {
+    console.log("You are adding a Todo", t);
+    this.todos.push(t);
   }
 }
 </script>
