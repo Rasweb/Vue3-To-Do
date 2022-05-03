@@ -5,7 +5,7 @@
       <AddTodo @addTodo="handleAddTodo($event)" />
       <!-- <p>Ordered by order</p> -->
       <ul>
-        <li v-for="todo in todos" :key="todo.id">
+        <li v-for="(todo, index) in todos" :key="todo.id">
           <h3>{{ todo.title }} in {{ todo.location }}</h3>
           <h4>Given by {{ todo.giver }}</h4>
           <div>
@@ -17,7 +17,7 @@
             </p>
           </div>
           <div>
-            <DeleteTodo @deleteTodo="handleRemoveTodo($event)" />
+            <DeleteTodo @deleteTodo="handleRemoveTodo($event, index)" />
           </div>
         </li>
       </ul>
@@ -48,9 +48,10 @@ export default class TodoList extends Vue {
     new Todo("Destroy Ganon", "Hyrule Castle", "King Rhoam", 7),
   ];
 
-  handleRemoveTodo(t: Todo) {
-    console.log("Du är nu i TodoList", t);
-    this.todos.splice(0, 1);
+  handleRemoveTodo(t: Todo, index: number) {
+    console.log("You removed a Todo");
+    // this.todos.splice(0, 1);
+    this.todos.splice(index, 1);
   }
   handleAddTodo(t: Todo) {
     console.log("You are adding a Todo", t);
