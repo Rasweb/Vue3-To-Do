@@ -15,7 +15,9 @@
               praesentium. Autem, veniam tempora!
             </p>
           </div>
-          <!-- <button @click="removeToDo"></button> -->
+          <div>
+            <DeleteTodo @deleteTodo="handleRemoveTodo($event)" />
+          </div>
         </li>
       </ul>
     </div>
@@ -25,14 +27,11 @@
 <script lang="ts">
 import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
-import DeleteBtn from "./Buttons/TodoDeleteButton.vue";
+import DeleteTodo from "./Buttons/DeleteTodo.vue";
 
 @Options({
   components: {
-    DeleteBtn,
-  },
-  props: {
-    todo: Todo,
+    DeleteTodo,
   },
 })
 export default class TodoList extends Vue {
@@ -45,6 +44,11 @@ export default class TodoList extends Vue {
     new Todo("Captured Memories", "Kakariko Village", "Impa", 6),
     new Todo("Destroy Ganon", "Hyrule Castle", "King Rhoam", 7),
   ];
+
+  handleRemoveTodo(t: Todo) {
+    console.log("Du är nu i TodoList", t);
+    this.todos.splice(0, 1);
+  }
 }
 </script>
 

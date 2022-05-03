@@ -1,13 +1,12 @@
 <template>
   <Header />
-  <delete-btn />
   <todo-list />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 import Header from "./components/Header.vue";
-import DeleteBtn from "./components/Todos/Buttons/TodoDeleteButton.vue";
+import DeleteBtn from "./components/Todos/Buttons/DeleteTodo.vue";
 import TodoList from "./components/Todos/TodoList.vue";
 
 @Options({
