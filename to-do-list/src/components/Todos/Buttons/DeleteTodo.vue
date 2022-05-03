@@ -20,10 +20,6 @@ export default class DeleteTodo extends Vue {
     console.log("Hej");
     this.$emit("deleteTodo");
   }
-
-  // removeToDo = (i) => {
-  //   Todo.splice(0, 1);
-  // };
 }
 </script>
 
