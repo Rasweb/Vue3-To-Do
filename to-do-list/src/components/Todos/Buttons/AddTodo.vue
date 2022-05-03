@@ -16,7 +16,6 @@
         @click="
           () => {
             handleAddTodo();
-            scrollToNew();
           }
         "
       >
