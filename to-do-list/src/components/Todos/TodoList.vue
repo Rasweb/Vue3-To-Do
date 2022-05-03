@@ -18,11 +18,20 @@
           </div>
           <div>
             <DeleteTodo @deleteTodo="handleRemoveTodo($event, index)" />
+            <DoneTodo @doneTodo="handleDoneTodo($event, index)" />
           </div>
         </li>
       </ul>
     </div>
   </div>
+
+  <!-- ('todoDone = !todoDone') -->
+
+  <!-- 
+<button class="showBtn" @click="isActive = false">Add todo</button>
+    <form @submit.prevent="" :class="[{ addForm: isActive }]">
+      <button @click="isActive = !isActive">Hide</button>
+ -->
 </template>
 
 <script lang="ts">
@@ -30,11 +39,13 @@ import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
 import DeleteTodo from "./Buttons/DeleteTodo.vue";
 import AddTodo from "./Buttons/AddTodo.vue";
+import DoneTodo from "./Buttons/DoneTodo.vue";
 
 @Options({
   components: {
     DeleteTodo,
     AddTodo,
+    DoneTodo,
   },
 })
 export default class TodoList extends Vue {
@@ -56,6 +67,10 @@ export default class TodoList extends Vue {
   handleAddTodo(t: Todo) {
     console.log("You are adding a Todo", t);
     this.todos.push(t);
+  }
+
+  handleDoneTodo(t: Todo, index: number) {
+    console.log("You are changing a Todo", t, index);
   }
 }
 </script>
