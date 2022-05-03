@@ -7,9 +7,5 @@ export class Todo {
     public id: number
   ) {
     this.done = false;
-    this.title = title;
-    this.location = location;
-    this.giver = giver;
-    this.id = id;
   }
 }
