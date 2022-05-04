@@ -5,7 +5,11 @@
       <AddTodo @addTodo="handleAddTodo($event)" />
       <!-- <p>Ordered by order</p> -->
       <ul>
-        <li v-for="(todo, index) in todos" :key="todo.id">
+        <li
+          v-for="(todo, index) in todos"
+          :key="todo.id"
+          :class="[{ done: todo.done }]"
+        >
           <h3>{{ todo.title }} in {{ todo.location }}</h3>
           <h4>Given by {{ todo.giver }}</h4>
           <div>
@@ -17,21 +21,16 @@
             </p>
           </div>
           <div>
+            <label
+              >&#10003;
+              <input type="checkbox" v-model="todo.done" />
+            </label>
             <DeleteTodo @deleteTodo="handleRemoveTodo($event, index)" />
-            <DoneTodo @doneTodo="handleDoneTodo($event, index)" />
           </div>
         </li>
       </ul>
     </div>
   </div>
-
-  <!-- ('todoDone = !todoDone') -->
-
-  <!-- 
-<button class="showBtn" @click="isActive = false">Add todo</button>
-    <form @submit.prevent="" :class="[{ addForm: isActive }]">
-      <button @click="isActive = !isActive">Hide</button>
- -->
 </template>
 
 <script lang="ts">
@@ -39,13 +38,11 @@ import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
 import DeleteTodo from "./Buttons/DeleteTodo.vue";
 import AddTodo from "./Buttons/AddTodo.vue";
-import DoneTodo from "./Buttons/DoneTodo.vue";
 
 @Options({
   components: {
     DeleteTodo,
     AddTodo,
-    DoneTodo,
   },
 })
 export default class TodoList extends Vue {
@@ -59,6 +56,8 @@ export default class TodoList extends Vue {
     new Todo("Destroy Ganon", "Hyrule Castle", "King Rhoam", 7),
   ];
 
+  todoDone = false;
+
   handleRemoveTodo(t: Todo, index: number) {
     console.log("You removed a Todo");
     // this.todos.splice(0, 1);
@@ -71,6 +70,7 @@ export default class TodoList extends Vue {
 
   handleDoneTodo(t: Todo, index: number) {
     console.log("You are changing a Todo", t, index);
+    t.done = !t.done;
   }
 }
 </script>
@@ -92,5 +92,25 @@ h1 {
       border-radius: 4px;
     }
   }
+  .done {
+    background-color: rgb(186, 186, 186);
+    //    text-decoration: line-through;
+    p,
+    h3,
+    h4 {
+      text-decoration: line-through;
+    }
+  }
+  label {
+    cursor: pointer;
+    text-decoration: none;
+    input {
+      display: none;
+    }
+  }
+
+  // input style:
+  //border-radius: 5px;
+  //padding: 0.5rem;
 }
 </style>
