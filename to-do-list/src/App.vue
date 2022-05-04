@@ -22,6 +22,17 @@ export default class App extends Vue {}
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
+// For testing
+// * {
+//   outline: 1px solid red;
+// }
+
+@mixin desktop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
 html,
 body {
   margin: 0px;
@@ -29,6 +40,11 @@ body {
   background-color: #ece6d9;
 }
 
+body,
+input,
+button {
+  font-family: HyliaSerif;
+}
 /* Specifies a custom font*/
 @font-face {
   font-family: HyliaSerif;
@@ -36,8 +52,10 @@ body {
 }
 
 h1 {
-  font-family: HyliaSerif;
   text-align: center;
+  @include desktop {
+    font-size: 40px;
+  }
 }
 
 #app {

@@ -24,4 +24,27 @@ export default class DeleteTodo extends Vue {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@mixin desktop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 6px;
+  margin: 4px 18px;
+  background-color: white;
+  border: none;
+  @include desktop {
+    font-size: 25px;
+  }
+}
+
+button:hover {
+  background-color: #f44336;
+  color: white;
+}
+</style>

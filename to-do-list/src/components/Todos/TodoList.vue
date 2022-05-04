@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Quest list</h1>
+    <h1>Todo list</h1>
     <div class="todoList">
       <AddTodo @addTodo="handleAddTodo($event)" />
       <!-- <p>Ordered by order</p> -->
@@ -20,7 +20,7 @@
               praesentium. Autem, veniam tempora!
             </p>
           </div>
-          <div>
+          <div class="btnCont">
             <label
               >&#10003;
               <input type="checkbox" v-model="todo.done" />
@@ -38,11 +38,13 @@ import { Todo } from "@/models/Todo";
 import { Options, Vue } from "vue-class-component";
 import DeleteTodo from "./Buttons/DeleteTodo.vue";
 import AddTodo from "./Buttons/AddTodo.vue";
+import App from "@/App.vue";
 
 @Options({
   components: {
     DeleteTodo,
     AddTodo,
+    App,
   },
 })
 export default class TodoList extends Vue {
@@ -76,11 +78,36 @@ export default class TodoList extends Vue {
 </script>
 
 <style lang="scss" scoped>
+@mixin desktop() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
 h1 {
   border-top: 1px solid black;
+  @include desktop {
+    font-size: 36px;
+  }
 }
 
 .todoList {
+  h3 {
+    @include desktop {
+      font-size: 32px;
+    }
+  }
+  h4 {
+    @include desktop {
+      font-size: 22px;
+    }
+  }
+  p {
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
   margin: 4%;
   ul {
     padding: 0;
@@ -89,28 +116,34 @@ h1 {
       background-color: white;
       padding: 16px;
       margin: 5% 0;
-      border-radius: 4px;
+      border-radius: 20px;
     }
   }
   .done {
     background-color: rgb(186, 186, 186);
-    //    text-decoration: line-through;
     p,
     h3,
     h4 {
       text-decoration: line-through;
     }
   }
-  label {
-    cursor: pointer;
-    text-decoration: none;
-    input {
-      display: none;
+  .btnCont {
+    display: flex;
+    label {
+      font-size: 25px;
+      cursor: pointer;
+      text-decoration: none;
+      @include desktop {
+        font-size: 32px;
+      }
+      input {
+        display: none;
+      }
+    }
+    label:hover {
+      background-color: #17b169;
+      color: white;
     }
   }
-
-  // input style:
-  //border-radius: 5px;
-  //padding: 0.5rem;
 }
 </style>
