@@ -1,4 +1,14 @@
-# To Do List
+## Table of contents
+
+- [Overview](#overview)
+  - [To Do project](#to-do-project)
+  - [Project setup](#project-setup)
+  - [Screenshot](#screenshot)
+  - [Author](#author)
+
+## Overview
+
+### To Do project
 
 Welcome to my Zelda inspired to do list. Built using vueJs with Scss/sass, typeScript and single file component via vueJs.
 
@@ -31,4 +41,12 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
+### Screenshot
+
+![](./src/assets/screenshot.png)
+
+### Author
+
+[Github](https://github.com/Rasweb)
+
+[Website](https://rasweb.one/)
