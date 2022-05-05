@@ -1,10 +1,10 @@
 # To Do List
 
-Welcome to my Zelda inspired to do list. Created using vueJs with Scss/sass, typeScript and single file component through vueJs.
+Welcome to my Zelda inspired to do list. Built using vueJs with Scss/sass, typeScript and single file component via vueJs.
 
-This project was created because I wanted to learn more about VueJs a JavaScript framework. This is also my first vuejs project, which means that almost everything in this project was unkown to me in the beginning.
+This project was created in order to know more about VueJs a JavaScript framework. It is also my first vuejs project, which means that nearly everything about this project was unknown to me at first.
 
-Every text information are from "The Legend of Zelda Breath Of The Wild" Nintendo game on Nintendo Switch.
+Almost all textual information comes from Nintendo's "The Legend of Zelda Breath Of The Wild" game.
 [Zelda BOTW](https://www.zelda.com/breath-of-the-wild/).
 
 ## Project setup
