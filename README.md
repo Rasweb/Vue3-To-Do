@@ -1,6 +1,6 @@
-# to-do-list
+# To Do List
 
-Welcome to my Zelda inspired to do list. Created using vueJs with Sass/sass, typeScript and single file component through vueJs.
+Welcome to my Zelda inspired to do list. Created using vueJs with Scss/sass, typeScript and single file component through vueJs.
 
 This project was created because I wanted to learn more about VueJs a JavaScript framework. This is also my first vuejs project, which means that almost everything in this project was unkown to me in the beginning.
 
