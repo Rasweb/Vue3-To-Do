@@ -1,6 +1,11 @@
 # to-do-list
 
-This is information from Nintendos Legend of Zelda Breath of the Wild. I don't own any of these information.
+Welcome to my Zelda inspired to do list. Created using vueJs with Sass/sass, typeScript and single file component through vueJs.
+
+This project was created because I wanted to learn more about VueJs a JavaScript framework. This is also my first vuejs project, which means that almost everything in this project was unkown to me in the beginning.
+
+Every text information are from "The Legend of Zelda Breath Of The Wild" Nintendo game on Nintendo Switch.
+[Zelda BOTW](https://www.zelda.com/breath-of-the-wild/).
 
 ## Project setup
 
@@ -27,44 +32,3 @@ npm run lint
 ```
 
 ### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### Todo component tree
-
-```
-App (root component)
-    TodoList
-        TodoItem
-            TodoDeleteButton
-            TodoEditButton
-    TodoFooter
-        TodoClearButton
-        TodoStatistic
-```
-
-### List of Objects example in vue.
-
-```
-<script>
-lists: [
-    {id:1, title: dave },
-    {id:2, title: brad},
-    {id:3, title: bob}
-]
-</script>
-
-<template>
-<Todo v-for="list in lists"
-:key="list.id"
-:title="post.title />
-</template>
-```
-
-<!--
-SORTS THE TODO
-Todo.sort(function (a,b) {
-    return a.title - b.title
-})
-
- -->
